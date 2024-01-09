@@ -5,6 +5,8 @@ An example of building `ros1_bridge` on Ubuntu 22.04 `jammy` on top of a ROS 2 `
 This consists of three containers in layers, because I cribbed from osrf/docker_images: https://github.com/osrf/docker_images/tree/master/ros2/source
 
 
+To get started quickly: `make && make run`
+
 In order for this to work, you have to skip installing anything from the ros package mirror.
 
 Outline of the steps I followed (and what is in docker) below
@@ -51,7 +53,7 @@ rosdep update
 
 # Set up repositories
 mkdir -p ~/ros2_ws/src
-git clone https://github.com/ros2/ros2.git
+git clone https://github.com/ros2/ros2.git -b humble
 vcs import src < ros2/ros2.repos
 
 # Install dependencies
